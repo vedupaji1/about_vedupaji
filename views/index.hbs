@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://drive.google.com/uc?export=download&id=1edu1ZtUJD3NkeUCUa-jsEt1igkqM9HYz"
+        type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+            background-color: #ffffff;
+        }
+
+        .header_op {
+            height: 40rem;
+            width: 100%;
+            color: #ffffff;
+            background-color: #30415b;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .sec_div {
+            height: 20rem;
+            width: 40rem;
+            margin-top: 10rem;
+            margin-left: 15rem;
+            position: absolute;
+        }
+
+        .main_about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main_text_op {
+            margin-top: 35rem;
+            height: auto;
+            width: 130rem;
+            background-color: #f9f9ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile_op {
+            margin-top: -10rem;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        img.profile_image {
+            border-radius: 50%;
+            height: 40rem;
+            width: 40rem;
+            border: 0.8rem solid #f9f9ff;
+
+        }
+
+        .hi_guys_text {
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: 6rem;
+            margin: 0;
+            color: #ffbc00;
+        }
+
+        .this_is_text {
+            font-size: 3rem;
+            font-family: 'Staatliches', cursive;
+            margin-left: 10rem;
+            color: #e5e5e5;
+        }
+
+        .ani_op_1 {
+            height: 0.5rem;
+            background-color: #ffffff;
+            width: 40rem;
+            animation: anim 2s infinite;
+        }
+
+        @keyframes anim {
+            0% {
+                width: 0rem;
+            }
+
+            50% {
+                width: 40rem;
+                transform: scale(-1, 1);
+            }
+
+            100% {
+                width: 0rem;
+            }
+        }
+
+        .text_info {
+            width: initial;
+            height: auto;
+            font-size: 2rem;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            margin-top: 35rem;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: column;
+            align-items: center;*/
+        }
+
+        .short_info {
+            height: 2.2rem;
+            width: 35rem;
+            padding: 1rem;
+            /*background-color: #e5e5e5;*/
+            background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+            margin-left: 2rem;
+            margin-top: 1.5rem;
+            /* border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;*/
+            border-radius: 1rem;
+            transition: all 0.5s;
+        }
+
+        .short_info p {
+            margin: 0%;
+            margin-left: 1.5rem;
+        }
+
+        .show_info_10 {
+            color: #fdf401;
+        }
+
+        .show_data_10 {
+            color: #f9f9ff;
+            display: none;
+        }
+
+        .services_pp {
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        .services_pp ul {
+            margin: 0%;
+        }
+
+        .div_info_10 {
+            height: auto;
+            width: auto;
+            display: flex;
+        }
+
+        .about_head_10 {
+            color: #30415b;
+            margin: 0;
+            padding: 2rem 0rem 2rem 2rem;
+            font-size: 3rem;
+            background: #90b5ec;
+            background: transparent;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .anim_op {
+            background-color: #f9f9ff;
+            transition: all 0.5s;
+            height: 7.7rem;
+            width: 0%;
+            position: absolute;
+            z-index: 1;
+        }
+
+
+        .about_company_op {
+            height: 100%;
+            width: 46rem;
+            padding-bottom: 2rem;
+            background-color: white;
+            margin-bottom: 5rem;
+            box-shadow: 3px 5px 25px 0 rgb(214 214 242);
+        }
+
+        .about_me_op {
+            height: auto;
+            width: 46rem;
+            padding-bottom: 2rem;
+            background-color: white;
+            margin-bottom: 25rem;
+            box-shadow: 3px 5px 25px 0 rgb(214 214 242);
+            margin-left: 15rem;
+        }
+
+        .user_feedback {
+            height: auto;
+            width: 45rem;
+            background-color: white;
+            position: absolute;
+            margin: 75rem 62rem 0rem 0rem;
+        }
+
+
+
+        .div11 {
+            height: auto;
+            width: inherit;
+            box-shadow: 0 0.2rem 0.4rem rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            background-color: white;
+            border-radius: 1rem;
+        }
+
+        input {
+            height: 2rem;
+            width: 25rem;
+            border-radius: 0.6rem;
+            border: 1px solid #dddfe2;
+            padding: 1rem;
+            margin-left: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #006eff;
+            box-shadow: 0.05rem 0.05rem 0.3rem 0.005rem #006eff;
+        }
+
+        textarea {
+            resize: none;
+            height: auto;
+            width: 25rem;
+            border-radius: 0.6rem;
+            border: 1px solid #dddfe2;
+            padding: 1rem;
+            font-family: arial;
+            overflow: hidden;
+            margin-top: 1rem;
+            margin-left: 2.5rem;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #006eff;
+            box-shadow: 0.05rem 0.05rem 0.3rem 0.005rem #006eff;
+        }
+
+        .butu1 {
+            height: 5rem;
+            width: 27rem;
+            border-radius: 0.6rem;
+            height: 3.5rem;
+            background-color: #3f8bf1;
+            transition: background-color 0.3s;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 150%;
+            margin-top: 2rem;
+            margin-left: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .butu1:hover {
+            background-color: #006eff;
+        }
+
+
+
+        footer {
+            display: flex;
+            height: 25rem;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            flex-direction: column;
+            background-color: rgb(15, 15, 15);
+        }
+
+        .lococo {
+            display: flex;
+        }
+
+        footer .lococo a {
+            text-decoration: none;
+            margin-bottom: 5rem;
+        }
+
+        .ffo {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 3.5rem;
+            width: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem;
+            box-shadow: 0 0 0 0.1rem white;
+        }
+
+        #ffo1:hover {
+            height: 4.5rem;
+            width: 4.5rem;
+            margin: 0%;
+            margin-top: 0;
+            box-shadow: none;
+        }
+
+        #ffo2:hover {
+            height: 4.5rem;
+            width: 4.5rem;
+            margin: 0%;
+            margin-top: 0;
+            box-shadow: none;
+        }
+
+        #ffo3:hover {
+            height: 4.5rem;
+            width: 4.5rem;
+            margin: 0%;
+            margin-top: 0;
+            box-shadow: none;
+        }
+
+        #ffo4:hover {
+            height: 4.5rem;
+            width: 4.5rem;
+            margin: 0%;
+            margin-top: 0;
+            box-shadow: none;
+        }
+
+
+        @media only screen and (max-width: 1350px) {
+            .sec_div {
+                margin-top: 3rem;
+                margin-left: 10rem;
+            }
+
+            .main_text_op {
+                width: 100rem;
+            }
+
+            .about_me_op {
+                margin-left: 2rem;
+            }
+
+            .user_feedback {
+                margin: 75rem 49rem 0rem 0rem;
+            }
+        }
+
+        @media only screen and (max-width:1000px) {
+            .main_text_op {
+                width: 100%;
+            }
+
+            .user_feedback {
+                position: relative;
+                margin: 0rem 0rem 10rem 0rem;
+            }
+
+            .about_me_op {
+                margin-bottom: 5rem;
+            }
+        }
+
+        @media only screen and (max-width:900px) {
+            .text_info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about_me_op {
+                margin-left: 0rem;
+            }
+        }
+
+        @media only screen and (max-width: 620px) {
+            .text_info {
+                margin-top: 30rem;
+            }
+
+            img.profile_image {
+                height: 35rem;
+                width: 35rem;
+            }
+
+            .sec_div {
+                margin-top: 3rem;
+                margin-left: 8rem;
+                width: 35rem;
+            }
+
+            .sec_div h1 {
+                font-size: 5rem;
+            }
+
+            .sec_div p {
+                font-size: 2.5rem;
+            }
+
+            .sec_div div {
+                width: 35rem;
+            }
+
+            @keyframes anim {
+                0% {
+                    width: 0rem;
+                }
+
+                50% {
+                    width: 35rem;
+                    transform: scale(-1, 1);
+                }
+
+                100% {
+                    width: 0rem;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .user_feedback {
+                width: 32rem;
+            }
+
+            .about_company_op {
+                width: 34rem;
+            }
+
+            .about_me_op {
+                width: 34rem;
+            }
+
+            .text_info {
+                margin-top: 20rem;
+            }
+
+            img.profile_image {
+                height: 25rem;
+                width: 25rem;
+            }
+
+            .sec_div {
+                margin-top: 5rem;
+                margin-left: 2rem;
+                width: 28rem;
+                height: 15rem;
+            }
+
+            .sec_div h1 {
+                font-size: 4rem;
+            }
+
+            .sec_div p {
+                font-size: 2.5rem;
+                margin-left: 4rem;
+            }
+
+            .sec_div div {
+                width: 28rem;
+            }
+
+            @keyframes anim {
+                0% {
+                    width: 0rem;
+                }
+
+                50% {
+                    width: 28rem;
+                    transform: scale(-1, 1);
+                }
+
+                100% {
+                    width: 0rem;
+                }
+            }
+
+            .short_info {
+                width: 28rem;
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="header_op">
+            <div class="sec_div">
+                <h1 class="hi_guys_text">Hi Guys</h1>
+                <p class="this_is_text">This Is Me Vedupaji</p>
+                <div class="ani_op_1"></div>
+            </div>
+        </div>
+
+        <div class="main_about">
+            <div class="main_text_op">
+                <div class="profile_op">
+                    <img src="https://drive.google.com/uc?export=download&id=1vweCj93nEHMmXDBsbIwt5nfq3ATovqED"
+                        alt="Profile_image" class="profile_image">
+                </div>
+
+                <div class="text_info">
+                    <div class="about_company_op">
+                        <div onmouseover="show_back_op(0)" onmouseout="hide_back_op(0)"
+                            style="margin: 0%;padding: 0%;height: 7.7rem;width: inherit;">
+                            <h1 class="about_head_10">About Company</h1>
+                            <div class="anim_op"></div>
+                        </div>
+                        <div class="div_info_10">
+                            <div style="margin-top: 3rem;" onmouseover="start_hide(0)" onmouseout="leave_hide(0)"
+                                class="short_info">
+                                <p><span class="show_info_10">Company Name</span><span
+                                        class="show_data_10">VARtworld</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(1)" onmouseout="leave_hide(1)" class="short_info">
+                                <p><span class="show_info_10">Services</span> <span class="show_data_10"></span></p>
+                                <div class="services_pp">
+                                    <ul>
+                                        <li>Website Development</li>
+                                        <li>Tech Consultancy</li>
+                                        <li>Entertainment</li>
+                                        <li>Shoping</li>
+                                        <li>Online Teaching</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(2)" onmouseout="leave_hide(2)" class="short_info">
+                                <p><span class="show_info_10">Office</span><span class="show_data_10">Ahmedabab,
+                                        Gujrat</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(3)" onmouseout="leave_hide(3)" class="short_info">
+                                <p><span class="show_info_10">Email</span> <span class="show_data_10">
+                                        vedupaji@gmail.com</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="about_me_op">
+                        <div onmouseover="show_back_op(1)" onmouseout="hide_back_op(1)"
+                            style="margin: 0%;padding: 0%;height: 7.7rem;width: inherit;">
+                            <h1 class="about_head_10">About Me</h1>
+                            <div class="anim_op"></div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div style="margin-top: 2rem;" onmouseover="start_hide(4)" onmouseout="leave_hide(4)"
+                                class="short_info">
+                                <p><span class="show_info_10">Name</span> <span class="show_data_10">
+                                        Vedupaji</span></p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(5)" onmouseout="leave_hide(5)" class="short_info">
+                                <p><span class="show_info_10">Age</span> <span class="show_data_10">
+                                        18</span></p>
+                            </div>
+                        </div>
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(6)" onmouseout="leave_hide(6)" class="short_info">
+                                <p><span class="show_info_10">Experience</span> <span class="show_data_10">
+                                        2 Years</span></p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(7)" onmouseout="leave_hide(7)" class="short_info">
+                                <p><span class="show_info_10"> Computer Languages Knows</span><span
+                                        class="show_data_10"> C,
+                                        C++, Java, Javascript,HTML And CSS (Markup And
+                                        Styling Language)</span></p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(8)" onmouseout="leave_hide(8)" class="short_info">
+                                <p><span class="show_info_10"> Primary Communication Language</span><span
+                                        class="show_data_10"> Hindi</span> </p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(9)" onmouseout="leave_hide(9)" class="short_info">
+                                <p><span class="show_info_10"> Secondry Communication Language</span><span
+                                        class="show_data_10"> English</span> </p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(10)" onmouseout="leave_hide(10)" class="short_info">
+                                <p><span class="show_info_10">Nationality</span> <span class="show_data_10">
+                                        Indian</span></p>
+                            </div>
+                        </div>
+
+                        <div class="div_info_10">
+                            <div onmouseover="start_hide(11)" onmouseout="leave_hide(11)" class="short_info">
+                                <p><span class="show_info_10">GitHub Id</span><span class="show_data_10">
+                                        vedupaji1</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="user_feedback">
+                    <div class="div11">
+                        <div onmouseover="show_back_op(2)" onmouseout="hide_back_op(2)"
+                            style="margin: 0%;padding: 0%;height: 7.7rem;width: inherit;">
+                            <h1 style="padding-left: 2.5rem;" class="about_head_10">Feedback</h1>
+                            <div class="anim_op"></div>
+                        </div>
+                        <input class="name_op" type="email" placeholder="Enter Your Email Id" id="user_mail" value=""
+                            required><br>
+                        <textarea class="message_op" placeholder="Enter Your Message" name="user_message"
+                            id="user_message" cols="" rows=""></textarea><br>
+                        <button class="butu1 but_hide" onclick="submit_data()">Message</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="lococo">
+            <a href="https://www.youtube.com/channel/UCLYh239Pl56prNR5YGZWxHw" target="_blank">
+                <div id="ffo1" class="ffo"><i style="color: #FF0000;" class="fa fa-2x fa-youtube-play"></div></i>
+            </a>
+            <a href="https://www.facebook.com/panchal.vedant.96" target="_blank">
+                <div id="ffo2" style="background-color:	#4267B2 ;" class="ffo"><i style="color: white"
+                        class="fa fa-2x fa-facebook"></div></i>
+            </a>
+            <a href="https://www.instagram.com/vedupaji/" target="_blank">
+                <div id="ffo3" style="background-color: #cd486b ;" class="ffo"><i style="color: rgb(255, 255, 255) ;"
+                        class="fa fa-2x fa-instagram"></div></i>
+            </a>
+            <a href="https://twitter.com/Vedupaji4" target="_blank">
+                <div id="ffo4" style="background-color: 	#1DA1F2;" class="ffo"><i style="color:rgb(255, 255, 255) ;"
+                        class="fa fa-2x fa-twitter"></div></i>
+            </a>
+        </div>
+        <div>
+            <p style="color: white;font-size: 150%;font-family:Arial, Helvetica, sans-serif;margin-bottom: 3rem;">By,
+                Vedupaji</p>
+        </div>
+
+
+    </footer>
+    <script>
+        document.getElementById("user_message").addEventListener('input', () => {
+            if (document.getElementById("user_message").scrollHeight > 165) {
+                document.getElementById("user_message").style.overflow = "scroll"
+            }
+            else {
+                document.getElementById("user_message").style.height = "auto";
+                let over_size = document.getElementById("user_message").scrollHeight;
+                document.getElementById("user_message").style.height = (over_size / 10 - 1) + "rem";
+            }
+        })
+    </script>
+
+    <script>
+        let back_pp = document.getElementsByClassName("anim_op");
+        const show_back_op = (i) => {
+            back_pp[i].style.width = "inherit";
+        }
+        const hide_back_op = (i) => {
+            back_pp[i].style.width = "0%";
+        }
+    </script>
+
+    <script>
+        let show_con_1 = document.getElementsByClassName("show_data_10");
+        let inc_width = document.getElementsByClassName("short_info");
+        let screen_size_op = document.getElementsByTagName("body")[0].clientWidth;
+        let class_no_op = -1;
+        if (screen_size_op < 450) {
+            inc_width[8].style.height = "4.5rem";
+            inc_width[9].style.height = "4.5rem";
+        }
+
+        window.addEventListener("resize", () => {
+            let new_screen_size_op = document.getElementsByTagName("body")[0].clientWidth;
+            if (new_screen_size_op < 450) {
+                for (let i = 0; i < 12; i++) {
+                    if (show_con_1[i].style.display != "block") {
+                        if (i >= 8 && i <= 9) {
+                            inc_width[i].style.height = "4.5rem";
+                        }
+                        inc_width[i].style.width = "28rem";
+                    }
+                    else {
+                        if (i >= 8 && i <= 9) {
+                            inc_width[i].style.height = "10rem";
+                        }
+                        inc_width[i].style.width = "30rem";
+                    }
+                }
+            }
+            else {
+                for (let i = 0; i < 12; i++) {
+                    if (show_con_1[i].style.display != "block") {
+                        if (i >= 8 && i <= 9) {
+                            inc_width[i].style.height = "2.2rem";
+                        }
+                        inc_width[i].style.width = "35rem";
+                    }
+                    else {
+                        if (i >= 8 && i <= 9) {
+                            inc_width[i].style.height = "7rem";
+                        }
+                        inc_width[i].style.width = "40rem";
+                    }
+                }
+            }
+        })
+
+        const start_hide = (i) => {
+            let screen_size_op_10 = document.getElementsByTagName("body")[0].clientWidth;
+            class_no_op = i;
+            inc_width[i].style.boxShadow = "0.01rem 0.2rem 1rem 0.01rem rgb(63 95 127)";
+            if (screen_size_op_10 < 450) {
+                inc_width[i].style.width = "30rem";
+            }
+            else {
+                inc_width[i].style.width = "40rem";
+            }
+            if (i == 1) {
+                inc_width[i].style.height = "15rem";
+            }
+            else if (screen_size_op_10 < 450 && (i >= 8 && i <= 9)) {
+                inc_width[i].style.height = "7rem";
+            }
+            else if (screen_size_op_10 < 450 && i == 7) {
+                inc_width[i].style.height = "10rem";
+            }
+            else if (i == 7) {
+                inc_width[i].style.height = "7rem";
+            }
+            else {
+                inc_width[i].style.height = "5rem";
+            }
+            setTimeout(() => {
+                show_con_1[i].style.display = "block";
+                if (i == 1) {
+                    document.getElementsByClassName("services_pp")[0].style.display = "block";
+                }
+            }, 200)
+        }
+
+        const leave_hide = (i) => {
+            let screen_size_op_10 = document.getElementsByTagName("body")[0].clientWidth;
+            inc_width[i].style.boxShadow = "none";
+            if (screen_size_op_10 < 450) {
+                inc_width[i].style.width = "28rem";
+            }
+            else {
+                inc_width[i].style.width = "35rem";
+            }
+            if (screen_size_op_10 < 450 && (i >= 8 && i <= 9)) {
+                inc_width[i].style.height = "4.5rem";
+            }
+            else {
+                inc_width[i].style.height = "2.2rem";
+            }
+            setTimeout(() => {
+                show_con_1[i].style.display = "none";
+                if (i == 1) {
+                    document.getElementsByClassName("services_pp")[0].style.display = "none";
+                }
+            }, 200)
+        }
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const submit_data = () => {
+            let data = {
+                name: document.getElementsByClassName("name_op")[0].value,
+                message: document.getElementsByClassName("message_op")[0].value
+            }
+            if (data.name == "" || data.message == "") {
+                alert("Please Fill All Details");
+            }
+            else {
+                let che = 0;
+                let str_op = data.name.substr((data.name.length - 4), data.name.length)
+                if (str_op == ".com") {
+                    che = 1;
+                }
+                if ((data.name.indexOf("@") != -1) && che == 1) {
+                    socket.emit('get_data', data);
+                    alert('Message Send');
+                    document.getElementsByClassName("name_op")[0].value="";
+                    document.getElementsByClassName("message_op")[0].value="";
+                }
+                else {
+                    alert("Invalid Email");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
